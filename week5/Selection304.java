@@ -18,19 +18,15 @@ switch (operator) {
     case '+':
         result = operand1 + operand2;
         System.out.println(operand1 + " + " + operand2 + "=" + result);
-        break;
     case '-':
         result = operand1 - operand2;
-        System.out.println(operand1 + " - " + operand2 + "=" + result);
-        break;    
+        System.out.println(operand1 + " - " + operand2 + "=" + result); 
      case '*':
         result = operand1 * operand2;
         System.out.println(operand1 + " * " + operand2 + "=" + result);
-        break;
      case '/':
         result = operand1 / operand2;
         System.out.println(operand1 + " / " + operand2 + "=" + result);
-        break;
 }    
     }
 }
