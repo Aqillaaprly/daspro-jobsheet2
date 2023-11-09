@@ -5,7 +5,7 @@ public class ArrayBilangan04 {
     Scanner sc = new Scanner(System.in);
     int [] bil = new int[4];
    
-    for (int i = 0; i < 4; i++ ){
+    for (int i = 0; i <= 4; i++ ){
         System.out.println(bil[i]);
     }
     }
