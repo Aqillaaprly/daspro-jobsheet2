@@ -5,10 +5,8 @@ public class ArrayNumber04 {
     Scanner sc = new Scanner(System.in);
 
     int[] number = {5,12,7,20};
-
-    System.out.println(number[0]);
-    System.out.println(number[1]);
-    System.out.println(number[2]);
-    System.out.println(number[3]);
+     for (int i = 0; i <= 4; i++) {
+        System.out.println(number[i]);
+     }
     }
 }
