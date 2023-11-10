@@ -7,6 +7,7 @@ public class ArrayAverageScore04 {
         int[] score = new int[10];
         double total = 0;
         double average;
+        int passedCount = 0;
 
         for (int i = 0; i < score.length; i++) {
             System.out.print("Enter student score " + (i + 1) + ": ");
@@ -15,9 +16,13 @@ public class ArrayAverageScore04 {
 
         for (int i = 0; i < score.length; i++) {
             total += score[i];
+            if (score[i] > 70) {
+                passedCount++;
+            }
         }
 
         average = total / score.length;
         System.out.println("The class average score is " + average);
+        System.out.println("Number of students who passed: " + passedCount);
     }
 }
