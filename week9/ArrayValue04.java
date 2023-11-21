@@ -13,6 +13,8 @@ public class ArrayValue04 {
       for (int i = 0; i < finalScore.length; i++) {
         if(finalScore[i] > 70){
             System.out.println("Student " + i + "Passed !" );
+        } else {
+            System.out.println("Student  " + i + "Did'nt passed !");
         }
       }
     }
