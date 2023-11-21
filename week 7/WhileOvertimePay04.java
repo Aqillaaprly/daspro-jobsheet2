@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class WhileOvertimePay04 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int numEmployee, overtimeHours;
+        double overtimePay = 0, totalOvertimePay = 0;
+        String position;
+
+        System.out.print("Employee number = ");
+        numEmployee = input.nextInt();
+
+        int i = 0;
+        while (i < numEmployee) {
+            System.out.print("Position of employee " + (i + 1) + " (director, manager, staff) = ");
+            position = input.next();
+            System.out.println("Employee " + (i + 1) + " overtime hours =");
+            overtimeHours = input.nextInt();
+            i++;
+
+            if (position.equalsIgnoreCase("director")) {
+                continue; // Skip director's overtime pay calculation
+            } else if (position.equalsIgnoreCase("manager")) {
+                overtimePay = overtimeHours * 100000;
+            } else if (position.equalsIgnoreCase("staff")) {
+                overtimePay = overtimeHours * 75000;
+            } else {
+                System.out.println("Invalid position for employee " + i);
+                continue; // Skip invalid position and proceed to the next employee
+            }
+
+            totalOvertimePay += overtimePay;
+        }
+
+        System.out.println("Total Overtime Pay = " + totalOvertimePay);
+    }
+}
