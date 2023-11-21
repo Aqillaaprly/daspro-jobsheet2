@@ -1,20 +1,21 @@
-import java.util.Scanner;
+    import java.util.Scanner;
 
-public class ForMultiple04{
+public class WhileMultiple04 {
     public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-    int multiple, sum = 0, counter = 0;
+        int multiple, sum = 0, counter = 0;
+        System.out.print("Input the multiple = ");
+        multiple = input.nextInt();
+        int i = 1; 
 
-    System.out.print("Input the multiple = ");
-    multiple = input.nextInt();
-
-    for(int i=1;i<=50;i++) {
-        if(i%multiple == 0) {
-                sum = sum + i;
+        while (i <= 50) {
+            if (i % multiple == 0) {
+                sum += i;
                 counter++;
-                //System.out.print(i+"-");
+                // System.out.print(i + "-");
             }
+        i++; 
         }
         if (counter > 0) {
             double average = (double) sum / counter; // Calculate the average
@@ -24,6 +25,7 @@ public class ForMultiple04{
         } else {
             System.out.printf("There are no multiples of %d in the range 1 to 50.\n", multiple);
         }
-; 
+        input.close(); 
     }
 }
+
