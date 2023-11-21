@@ -8,6 +8,9 @@ public class ArrayAverageScore04 {
         double total = 0;
         double average;
         int passedCount = 0;
+        double passedTotal = 0;
+        int notPassedCount = 0;
+        double notPassedTotal = 0;
 
         for (int i = 0; i < score.length; i++) {
             System.out.print("Enter student score " + (i + 1) + ": ");
@@ -18,11 +21,28 @@ public class ArrayAverageScore04 {
             total += score[i];
             if (score[i] > 70) {
                 passedCount++;
+                passedTotal += score[i];
+            } else {
+                notPassedCount++;
+                notPassedTotal += score[i];
             }
         }
 
         average = total / score.length;
         System.out.println("The class average score is " + average);
-        System.out.println("Number of students who passed: " + passedCount);
+
+        if (passedCount > 0) {
+            double passedAverage = passedTotal / passedCount;
+            System.out.println("Average score of passed students: " + passedAverage);
+        } else {
+            System.out.println("No student passed.");
+        }
+
+        if (notPassedCount > 0) {
+            double notPassedAverage = notPassedTotal / notPassedCount;
+            System.out.println("Average score of not passed students: " + notPassedAverage);
+        } else {
+            System.out.println("All students passed.");
+        }
     }
 }
