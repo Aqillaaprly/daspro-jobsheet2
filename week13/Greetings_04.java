@@ -11,6 +11,6 @@ public class Greetings_04 {
 
     public static void main(String[] args) {
         String name = getGreetingRecipient();
-        System.out.println("Thank You "  +  name  +  "May the force be with you! ");
+        System.out.println("Thank You "  +  name  +  "  May the force be with you! ");
     }
 }
